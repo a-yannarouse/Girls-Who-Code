@@ -1,0 +1,205 @@
+/* 
+
+This CSS file is contains the CSS rule sets for 
+    - index.html
+    - any universal elements that all pages use
+
+The CSS for the take-action.html is in take-action.css
+
+*/
+
+/************************************************/
+/************* UNIVERSAL ELEMENTS ***************/
+/************************************************/
+
+/* TODO: Customize your font properties and background color for all elements inside the <body> and <html> tags */
+body,
+html {
+  height: 100%;
+  font-size: 23px; 
+  font-family: 'Josefin Sans', sans-serif
+  line-height: 5.0em;
+  margin: 0em;
+  background-color: #e6ffff; 
+  box-sizing: border-box;
+}
+
+h1 {
+  letter-spacing: 5px;
+  font-size: 50px;
+  font-family: 'Rowdies', cursive;
+  color: #43d6b9ff;
+  text-align: center;
+  text-shadow: 10px 10px blue;
+}
+
+h2 {
+  letter-spacing: 3px;
+  font-size: 25px;
+  font-family: 'Anton', sans-serif;
+  color: 	#e600e6;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+p a {
+  color:  #ffffff;
+  text-decoration: none;
+}
+
+/************************************************/
+/*************** CSS FOR NAV BAR ****************/
+/************************************************/
+
+
+
+ul.nav-bar {
+  /* Styling for the <ul class="nav-bar"> element */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e6f7ff;
+  border-style: solid;
+  border-color: #b3b3ff;
+}
+
+/* TODO (optional): Change the font size*/
+
+li.nav {
+  /* Styling for the <li class="nav"> element */
+  float: right;
+  font-size: 15px;
+}
+
+/* TODO (optional): Change the font color, decoration, and/or case */
+
+li.nav a {
+  /* Styling for the <a> elements in <li class="nav"> */
+  display: block;
+  color: #0D38D3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* TODO (optional): Change the background color and/or font color when the mouse hovers over an item */
+
+li.nav a:hover {
+  /* Styling for the <a> elements when the mouse is hovering in <li class="nav"> */
+  background-color: #0D38D3;
+  color: #43d6b9ff;
+}
+
+/************************************************/
+/*********** CSS FOR FLEXBOX HEADING ************/
+/************************************************/
+
+/* TODO: Review the CSS properties to the flexbox container for title and intro text */
+.flex-container {
+  display: flex; 
+  flex-direction: row; 
+  flex-wrap: nowrap; 
+  justify-content: center; 
+  align-items: center; 
+
+  /* Design properties */
+  background-color:  #000000;
+  padding: 5px;
+
+  /* Positioning properties */
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 25%; 
+
+  /*Debugging Tip: Uncomment the line below to see the outline of the container*/
+  /*border-style: dotted;*/
+}
+
+/* TODO: Review the CSS properties to the flex item for the heading (the left box) */
+.heading-home {
+  padding: 2%;
+  color: #00ccff;
+  font-size: 50px;
+  letter-spacing: 10px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.intro-text {
+  background-color: #e6f7ff; 
+  padding: 3%;
+  margin: 2%;
+  color: #cc3399;
+  font-size: 17px; 
+  letter-spacing: 2px; 
+  line-height: 1.7em; 
+  text-align: center;
+  text: bold;
+}
+
+/*-----------TEXT SECTIONS-----------*/
+
+
+.text-section {
+  background-color: #ffb3ff;
+  padding: 20px 45px;
+  margin: 35px;
+  text-align: center;
+  color: white;
+  
+}
+
+/*---------IMAGE STYLING + PARALLAX PROPERTY---------*/
+
+/* TODO: Add the CSS selector for each image to the collective image rule set */
+
+.main-message,
+.image-one, 
+.image-two,
+.image-three {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #43d6b9ff;
+  background-size: cover;
+  min-height: 100%; /* This adjusts the height of the image */
+
+  /* TODO: Add the property to create the parallax scrolling effect here */
+  background-attachment: fixed;
+}
+
+.main-message {
+  background-image: url("https://cdn.glitch.com/51741ded-42a6-4f08-bb4c-94b87b833140%2Fblocks.jpg?v=1595992854303");
+}
+
+.image-one {
+  background-image: url("https://cdn.glitch.com/51741ded-42a6-4f08-bb4c-94b87b833140%2Fboy.jpg?v=1595993158915");
+}
+
+/* TODO: Add a second background image. Make sure you add this class selector to the collective image rule set above */
+.image-two {
+  background-image: url("https://cdn.glitch.com/51741ded-42a6-4f08-bb4c-94b87b833140%2FiStock-girl-speech-therapist-300.jpg?v=1595992865299");
+}
+.image-three {
+  background-image: url("https://cdn.glitch.com/51741ded-42a6-4f08-bb4c-94b87b833140%2F1439737.jpg?v=1596080498721");
+}
+.attributions {
+  font-size: 12px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .flex-container {
+    flex-wrap: wrap;
+    top: 20%;
+  }
+  
+.p {
+    color: white;
+  }
+}
